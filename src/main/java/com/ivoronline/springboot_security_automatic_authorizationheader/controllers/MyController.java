@@ -16,5 +16,11 @@ public class MyController {
     return "Hello from Controller";
   }
 
+  @Secured("ROLE_USER")
+  @RequestMapping("/Restricted")
+  public String restricted() {
+    return "Hello from Restricted Resource";
+  }
+
 }
 
